@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "\U0001F914 All other questions, including if you're not sure what to do."
+    url: https://gov.forta.network/c/start-here/faqs/11
+    about: Search on Discourse for similar questions or ask for help there.
+  - name: "\U0001F4AC Chat with the devs"
+    url: https://discord.gg/JrqQ4hAPzy
+    about: Ask questions about the Forta API
