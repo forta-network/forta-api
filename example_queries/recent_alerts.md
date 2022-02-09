@@ -1,10 +1,104 @@
 # Query recent alerts emitted by a specific agent
 
-## What information will I get?
+## What information can I get?
 
+This query will return specified agents' alerts that were created since 10 minutes ago. This query can be useful if you'd like to take immediate action such as the following after receiving the alerts:
 
+Some example use cases:
+* As a dApp owner, warn or notify my users of potential threats and governance changes in the dApp.
+* As a developer, automate mitigation steps after receiving a combination of alerts from 2 or more agents.
 
 ## How to execute this query?
 
+Step 1: Go to [Forta API Sandbox](https://studio.apollographql.com/sandbox?endpoint=https%3A%2F%2Fapi.forta.network%2Fgraphql). Make sure the endpoint is set to `https://api.forta.network/graphql` in the top left corner before proceeding to the next steps.
+<p align="left">
+  <img src="screenshots/sandbox_endpoint.png" alt="Sandbox Endpoint Screenshot" width="300"/>
+</p>
+
+Step 2: Create a new workspace.
+<p align="left">
+  <img src="screenshots/new_workspace.png" alt="New Workspace Screenshot" width="300"/>
+</p>
+
+Step 3: Paste the following query in the `Operation` panel. For more details on the available alert fields, please checkout the [AlertsResponse Schema](https://studio.apollographql.com/sandbox/schema/reference/objects/AlertsResponse).  
+
+```graphql
+query recentAlerts($input: AlertsInput) {
+  alerts(input: $input) {
+    pageInfo {
+      hasNextPage
+      endCursor {
+        alertId
+        blockNumber
+      }
+    }
+    alerts {
+      createdAt
+      name
+      protocol
+      findingType
+      source {
+        transactionHash
+        block {
+          number
+          chainId
+        }
+        agent {
+          id
+        }
+      }
+      severity
+    }
+  }
+}
+```
+
+<p align="left">
+  <img src="screenshots/operation_panel.png" alt="Operation Panel Screenshot" width="500"/>
+</p>
+
+Step 4: Replace the placeholders in the following query parameters and paste them in the `Variable` panel. For more details on the available query parameters, please checkout the [AlertsInput Schema](https://studio.apollographql.com/sandbox/schema/reference/inputs/AlertsInput)
+```json
+{
+  "input": {
+    "first": 5,
+    "agents": [<AGENT_ID_A>, <AGENT_ID_B>],
+    "createdSince": 600000,
+    "chainId": 1
+  }
+}
+```
+
+<p align="left">
+  <img src="screenshots/variable_panel.png" alt="Variable Panel Screenshot" width="500"/>
+</p>
+
+Step 5: Click on the blue submit button on the `Operation` panel to execute the query. 
+
+The button will look like the following: 
+
+> NOTE: The button text will be different depending on the query name. 
+
+<p align="left">
+  <img src="screenshots/query_submit_button.png" alt="Query Submit Button Screenshot" width="500"/>
+</p>
+
+And that's it! You should be able to see the query results in the `Response` panel on the right.
+
+## The results are paginated, how do I get the next page?
+
+If the output returns `"hasNextPage": true`, add the `after` query parameter in the `input` object to get the next page of alerts and execute the query. 
+
+```javascript
+{
+  "input": {
+    ...
+    after: {
+      "blockNumber": <END_CURSOR_BLOCK_NUMBER>,
+      "alertId": <END_CURSOR_ALERT_ID>
+    }
+  }
+}
+```
 
 
