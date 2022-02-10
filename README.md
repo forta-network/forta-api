@@ -11,8 +11,8 @@ Explore the following queries in the [Forta API Sandbox](https://studio.apollogr
 * [Query recent alerts emitted by a specific agent](example_queries/recent_alerts.md)
 * [Query today's alerts associated with certain addressees](example_queries/todays_alerts.md)
 * [Query past alerts by block number or date range](example_queries/past_alerts.md)
-* (WIP)[Query a list of blockchain projects](example_queries/blockchain_projects_list.md)
-* (WIP)[Query details of a blockchain project](example_queries/blockchain_project.md)
+* [Query a list of blockchain projects](example_queries/blockchain_projects_list.md)
+* [Query details of a blockchain project](example_queries/blockchain_project.md)
 
 ## Contribute
 

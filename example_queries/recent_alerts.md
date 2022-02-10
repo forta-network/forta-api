@@ -93,9 +93,9 @@ If the output returns `"hasNextPage": true`, add the `after` query parameter in 
 {
   "input": {
     ...
-    after: {
-      "blockNumber": <END_CURSOR_BLOCK_NUMBER>,
-      "alertId": <END_CURSOR_ALERT_ID>
+    "after": {
+      "blockNumber": "<END_CURSOR_BLOCK_NUMBER>",
+      "alertId": "<END_CURSOR_ALERT_ID>"
     }
   }
 }
