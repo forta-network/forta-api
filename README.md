@@ -3,15 +3,13 @@ This repository contains example queries to try in the [Forta API Sandbox](https
 
 To learn more about Forta, please visit [forta.org](https://forta.org/).
 
-**TODO: update docs link**
-
-For more details on this API, please check out the developer documentation at [docs.forta.network](TODO)
+For more details on this API, please check out the developer documentation at [docs.forta.network](https://docs.forta.network/en/latest/api/)
 
 ## Explore Example Queries
 Explore the following queries in the [Forta API Sandbox](https://studio.apollographql.com/sandbox?endpoint=https%3A%2F%2Fapi.forta.network%2Fgraphql).
 
 * [Query recent alerts emitted by a specific agent](example_queries/recent_alerts.md)
-* (WIP) [Query today's alerts associated with certain addressees](example_queries/todays_alerts.md)
+* [Query today's alerts associated with certain addressees](example_queries/todays_alerts.md)
 * (WIP)[Query past alerts by block number or date range](example_queries/past_alerts.md)
 * (WIP)[Query a list of blockchain projects](example_queries/blockchain_projects_list.md)
 * (WIP)[Query details of a blockchain project](example_queries/blockchain_project.md)
