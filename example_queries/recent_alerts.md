@@ -20,7 +20,7 @@ Step 2: Create a new workspace.
   <img src="screenshots/new_workspace.png" alt="New Workspace Screenshot" width="300"/>
 </p>
 
-Step 3: Paste the following query in the `Operation` panel. For more details on the available alert fields, please checkout the [AlertsResponse Schema](https://studio.apollographql.com/sandbox/schema/reference/objects/AlertsResponse).  
+Step 3: Paste the following query in the `Operation` panel. For more details on the available alert fields, please checkout the [AlertsResponse Schema](https://studio.apollographql.com/sandbox/schema/reference/objects/AlertsResponse).
 
 ```graphql
 query recentAlerts($input: AlertsInput) {
@@ -73,11 +73,11 @@ Step 4: Replace the placeholders in the following query parameters and paste the
   <img src="screenshots/variable_panel.png" alt="Variable Panel Screenshot" width="500"/>
 </p>
 
-Step 5: Click on the blue submit button on the `Operation` panel to execute the query. 
+Step 5: Click on the blue submit button on the `Operation` panel to execute the query.
 
-The button will look like the following: 
+The button will look like the following:
 
-> NOTE: The button text will be different depending on the query name. 
+> NOTE: The button text will be different depending on the query name.
 
 <p align="left">
   <img src="screenshots/query_submit_button.png" alt="Query Submit Button Screenshot" width="500"/>
@@ -87,7 +87,7 @@ And that's it! You should be able to see the query results in the `Response` pan
 
 ## The results are paginated, how do I get the next page?
 
-If the output returns `"hasNextPage": true`, add the `after` query parameter in the `input` object to get the next page of alerts and execute the query. 
+If the output returns `"hasNextPage": true`, add the `after` query parameter in the `input` object to get the next page of alerts and execute the query.
 
 ```javascript
 {

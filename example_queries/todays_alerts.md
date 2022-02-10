@@ -62,6 +62,7 @@ Step 4: Replace the placeholders in the following query parameters and paste the
     "first": 5,
     "addresses": [<ADDRESS_A>, <ADDRESS_B>],
     "chainId": 1,
+    "blockSortDirection": "asc",
     "blockDateRange": {
       "startDate": "2022-02-01",
       "endDate": "2022-02-01"
@@ -95,8 +96,8 @@ If the output returns `"hasNextPage": true`, add the `after` query parameter in 
   "input": {
     ...
     after: {
-      "blockNumber": <END_CURSOR_BLOCK_NUMBER>,
-      "alertId": <END_CURSOR_ALERT_ID>
+      "blockNumber": "<END_CURSOR_BLOCK_NUMBER>",
+      "alertId": "<END_CURSOR_ALERT_ID>"
     }
   }
 }
