@@ -48,6 +48,7 @@ query recentAlerts($input: AlertsInput) {
         }
       }
       severity
+      metadata
     }
   }
 }

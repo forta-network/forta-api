@@ -49,6 +49,7 @@ query pastAlerts($input: AlertsInput) {
         }
       }
       severity
+      metadata
     }
   }
 }
