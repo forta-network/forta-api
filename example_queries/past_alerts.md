@@ -23,7 +23,7 @@ Step 2: Create a new workspace.
 Step 3: Paste the following query in the `Operation` panel. For more details on the available alert fields, please checkout the [AlertsResponse Schema](https://studio.apollographql.com/sandbox/schema/reference/objects/AlertsResponse).
 
 ```graphql
-query recentAlerts($input: AlertsInput) {
+query pastAlerts($input: AlertsInput) {
   alerts(input: $input) {
     pageInfo {
       hasNextPage
