@@ -2,7 +2,7 @@
 
 ## What information will I get?
 
-This query will return details of a specific blockchain project. The original data source is at [ethereums-lists/contracts github repository](https://github.com/ethereum-lists/contracts#projects-entries).
+This query will return details of a specific blockchain project. The original data source is at [ethereums-lists/contracts github repository](https://github.com/ethereum-lists/contracts#projects-entries). If your project doesn't exist or is out of date, please add or update the information in the github repository ([instructions](https://github.com/ethereum-lists/contracts#contributing)).
 
 ## How to execute this query?
 
