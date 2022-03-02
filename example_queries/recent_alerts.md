@@ -49,6 +49,7 @@ query recentAlerts($input: AlertsInput) {
       }
       severity
       metadata
+      scanNodeCount
     }
   }
 }
@@ -102,4 +103,37 @@ If the output returns `"hasNextPage": true`, add the `after` query parameter in 
 }
 ```
 
+## Additional Filters
+
+### Filter alerts by number of scan node confirmations
+
+The following input filter will return alerts with `scanNodeCount` ranging from 2 to 10 (inclusive).
+You don't need to define both `gte` and `lte` at the same time.
+
+```javascript
+{
+  "input": {
+    ...
+    // scanNodeCount is the number of scan nodes that found the alert
+    "scanNodeConfirmations": {
+      "gte": 2,
+      "lte": 10
+    }
+  }
+}
+```
+
+If you're only interested in alerts with a `scanNodeCount` of 3, make sure the `gte` and `lte` value matches.
+
+```javascript
+{
+  "input": {
+    ...
+    "scanNodeConfirmations": {
+      "gte": 3,
+      "lte": 3
+    }
+  }
+}
+```
 
