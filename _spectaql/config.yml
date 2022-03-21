@@ -1,0 +1,24 @@
+spectaql:
+  logoFile: ./images/forta-logo.png
+  faviconFile: ./images/forta-logo.png
+  cssBuildMode: full
+
+introspection:
+  url: https://api.forta.network/graphql
+  removeTrailingPeriodFromDescriptions: false
+
+servers:
+  - url: https://api.forta.network/graphql
+    description: Forta API Production
+    production: true
+
+info:
+  title: Forta API GraphQL API Reference
+  description: Free [GraphQL](https://graphql.org/) API access to alerts and blockchain projects data
+  termsOfService: https://forta.org/terms-of-use/
+
+  x-hidePoweredBy: true
+  x-introItems:
+    - title: Forta API Support
+      description: The API is in beta mode. If you see any bugs or issues, please let us know at [github:forta-protocol/forta-api](https://github.com/forta-protocol/forta-api/issues/new/choose) or [discord](https://discord.gg/38eg5EP3F9).
+
