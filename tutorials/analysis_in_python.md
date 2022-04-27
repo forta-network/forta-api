@@ -1,7 +1,7 @@
 # Query Alerts for Analysis with Python
 
 With the following code, you can query alerts emitted between specified start and end date and convert the data into a pandas dataframe.
-You can also tweak the number of alerts you'd like to analyze with the `ALERT_COUNT_LIMIT` parameter. 
+You can also tweak the number of alerts you'd like to analyze with the `ALERT_COUNT_LIMIT` parameter.
 For more details on the available data fields, please checkout the [GraphQL Reference Doc](https://docs.forta.network/en/latest/forta-api-reference/)
 
 ```python
@@ -31,7 +31,7 @@ query exampleQuery($input: AlertsInput) {
           timestamp
           hash
         }
-        agent {
+        bot {
           id
         }
       }
@@ -70,16 +70,16 @@ while next_page_exists and len(all_alerts) < ALERT_COUNT_LIMIT:
     # query Forta API
     payload = dict(query=query, variables=query_variables)
     response = requests.request("POST", forta_api, json=payload, headers=headers)
-    
+
     # collect alerts
     data = response.json()['data']['alerts']
     alerts = data['alerts']
     all_alerts += alerts
-    
+
     # get next page of alerts if it exists
     next_page_exists = data['pageInfo']['hasNextPage']
     # endCursor contains alert Id and block number.
-    # This is needed to get the next page of alerts. 
+    # This is needed to get the next page of alerts.
     end_cursor = data['pageInfo']['endCursor']
     query_variables['input']['after'] = end_cursor
 
