@@ -17,6 +17,7 @@ Explore the following queries in the [Forta API Sandbox](https://studio.apollogr
 ## Explore Tutorials
 
 * [Query alerts for analysis with python](tutorials/analysis_in_python.md)
+* [Calculate bot stats with python](https://github.com/forta-network/starter-kits/blob/main/anomalous-token-transfers-ml-py/daily_model_stats.ipynb)
 
 ## Contribute
 
