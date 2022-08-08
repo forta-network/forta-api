@@ -1,5 +1,7 @@
 ## Update API Reference Docs
 
+Instructions for updating the GraphQL API reference docs at [https://docs.forta.network/en/latest/forta-api-reference](https://docs.forta.network/en/latest/forta-api-reference/#introduction)
+
 ### Prerequisites
 
 Install [SpectaQL](https://github.com/anvilco/spectaql)
