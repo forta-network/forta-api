@@ -20,5 +20,5 @@ info:
   x-hidePoweredBy: true
   x-introItems:
     - title: Forta API Support
-      description: The API is in beta mode. If you see any bugs or issues, please let us know at [github:forta-protocol/forta-api](https://github.com/forta-protocol/forta-api/issues/new/choose) or [discord](https://discord.gg/38eg5EP3F9).
+      description: The API is in beta mode. If you see any bugs or issues, please let us know at [github:forta-network/forta-api](https://github.com/forta-network/forta-api/issues/new/choose) or [discord](https://discord.gg/38eg5EP3F9).
 
