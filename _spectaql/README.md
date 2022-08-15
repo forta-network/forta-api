@@ -15,7 +15,7 @@ $ npm install -g spectaql
   ```bash
   $ cd _spectaql && npx spectaql config.yml -D
   ```
-2. Copy generated docs to the [Forta docs repo](https://github.com/forta-protocol/docs) and make a PR to update the reference docs at https://docs.forta.network/en/latest/api/ .
+2. Copy generated docs to the [Forta docs repo](https://github.com/forta-network/docs) and make a PR to update the reference docs at https://docs.forta.network/en/latest/api/ .
   ```bash
   $ cp -r _spectaql/public/* ~/workspace/docs/docs/forta-api-reference/
   ```
